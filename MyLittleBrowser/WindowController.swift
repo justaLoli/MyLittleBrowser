@@ -11,11 +11,12 @@ import Cocoa
 
 class WindowController: NSWindowController,NSWindowDelegate {
 
+   
+    
     func openURL(url:URL){
         let vc = window!.contentViewController as! ViewController
         vc.outLetWebView.load(URLRequest(url: url))
     }
-    
     
     override func windowDidLoad() {
         
@@ -24,12 +25,17 @@ class WindowController: NSWindowController,NSWindowDelegate {
         
         initWindowStyle()
         setViewController("sbid-viewcontroller")
-        
        
     }
     
     
     func initWindowStyle(){
+        
+        if let size = loadWindowSize(){
+            log.d("size", size)
+            window?.setContentSize(size)
+        }
+        
         log.d("initwindowstyle called")
         log.d("window",window)
         window?.delegate = self
@@ -95,12 +101,34 @@ class WindowController: NSWindowController,NSWindowDelegate {
         window!.setFrameOrigin(origin)
     }
     
-
-    func windowShouldClose(_ sender: NSWindow) -> Bool {
-        return true
+    
+    override func close(){
+        //MARK: GOOD MOVE (probably)
+        self.window?.contentViewController = nil
+        let size = window?.frame.size
+        saveWindowSize(size!)
+        return super.close()
     }
-    func windowWillResize(_ sender: NSWindow, to frameSize: NSSize) -> NSSize {
-        return frameSize
+    func saveWindowSize(_ size:NSSize){
+        let mydefaults = UserDefaults.standard
+        mydefaults.set(window?.frame.size.width, forKey: "windowsizewidth")
+        mydefaults.set(window?.frame.size.height, forKey: "windowsizeheight")
+        mydefaults.synchronize()
+        log.d("size saved!")
+    }
+    func loadWindowSize() -> NSSize?{
+        let mydefaults = UserDefaults.standard
+        let w = mydefaults.object(forKey: "windowsizewidth") as? Double
+        let h = mydefaults.object(forKey: "windowsizeheight") as? Double
+        if (w==nil) || (h==nil){return nil}
+        return NSSize(width: w!, height: h!)
+    }
+    var firstopen = true
+    func windowDidResize(_ notification: Notification) {
+        log.d("window did resize, the new size is ",window?.frame.size)
+        
+        
+    
     }
     func sayHi(){
         log.d("Hi! this is WindowController",self)

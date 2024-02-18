@@ -52,7 +52,7 @@
                 <viewController storyboardIdentifier="sbid-viewcontroller" id="rOU-ph-52Q" customClass="ViewController" customModule="MyLittleBrowser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="LZs-As-TxS">
                         <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView blendingMode="behindWindow" material="fullScreenUI" state="active" translatesAutoresizingMaskIntoConstraints="NO" id="rKQ-qZ-plW">
                                 <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
@@ -85,9 +85,8 @@
                                         <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="xmark.app.fill" catalog="system" imagePosition="only" alignment="center" borderStyle="border" focusRingType="exterior" imageScaling="proportionallyDown" inset="2" id="3rl-ln-I2N">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
-                                            <string key="keyEquivalent" base64-UTF8="YES">
-Gw
-</string>
+                                            <string key="keyEquivalent">w</string>
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                         </buttonCell>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="69E-7Q-oqT"/>
@@ -103,8 +102,9 @@ Gw
                                         <buttonCell key="cell" type="push" title="quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hTq-Kf-5kh">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
-                                            <string key="keyEquivalent">w</string>
-                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
                                         </buttonCell>
                                         <connections>
                                             <action selector="onQuitButtonClicked:" target="rOU-ph-52Q" id="Oc4-3A-EsJ"/>

@@ -15,8 +15,8 @@ class ViewController: NSViewController{
     
     
     
-    @IBOutlet var outLetWebView:WKWebView!
-    @IBOutlet var urlButton:DraggableNSButton!
+    @IBOutlet weak var outLetWebView:WKWebView!
+    @IBOutlet weak var urlButton:DraggableNSButton!
     
     override func viewDidLoad() {
         log.d("viewdidload called",self)
@@ -50,15 +50,20 @@ class ViewController: NSViewController{
         log.d("urlButtonClicked on vc", self)
     }
     @IBAction func onQuitButtonClicked(_ sender:NSButton){
-        //esc
+        //cmd + w
         log.d("quitButtonClicked on vc", self)
         
-        //MARK: BAD MOVE! (see Appdelegate - openWindow)
-        //当前窗口的WKWebView会崩溃
-        //但是至少不会让网页在后台继续加载了
-        view.window?.close()
+        /*MARK: GOOD MOVE (probably..)
+        the WebView will be terminated and the memory will be cleaned.
+        remove all the references to the webview will trigger the garbge collecting... at least in my theory.
+        in this case, i overwrite the close() func in the windowcontroller, and let it close the reference to the viewcontroller, which is self. WKWebView and all other views will be cleaned.
+        MARK: lesson learned:
+        MARK: 1. WindowController has a close() func that can be override
+        MARK: 2. Set all (not weak) reference to the object into nil will free the object.
+        MARK: 3. always use "weak" ststement for outlet, which is (maybe) good for garbge collection*/
+        view.window?.windowController?.close()
         
-        //不可见的按钮目前不会被激活，因此cmd+w不会激活此函数
+        //不可见的按钮目前不会被激活，因此esc不会激活此函数
     }
     @IBAction func onQuitAllButtonClicked(_ sender:NSButton){
         log.d("quitAllButtonClicked on vc", self)
@@ -77,6 +82,7 @@ extension ViewController:WKUIDelegate{
     }
     
     func webViewDidClose(_ webView: WKWebView) {
+        log.d("webViewDidClose called")
         webView.stopLoading()
         webView.navigationDelegate = nil
         webView.uiDelegate = nil

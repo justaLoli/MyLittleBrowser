@@ -9,8 +9,9 @@
 class Log{
     func d(_ sender:String,_ elements: Any?...) {
         print("[debug] ",terminator: "")
+        if elements.isEmpty{print(sender);return}
+        
         print(sender + ": ",terminator: "")
-//        debugPrint(elements)
         for e in elements{
             if(e != nil){
                 debugPrint(e!,terminator: "")
@@ -19,7 +20,6 @@ class Log{
                 print(type(of: e),"nil",terminator: "")
             }
         }
-//        print(elements)
         print("")
     }
 

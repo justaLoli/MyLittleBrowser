@@ -80,10 +80,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         windowController.setWindowPos(mousePos: mousePos)
         
         //得把创建的东西（的引用）存下来
-        //移除了这一行
-        //MARK: BAD IDEA!
         //not saving windowController will cause it been deleted instantly
-//        listOfWindows.append(windowController)
+        listOfWindows.append(windowController)
         
         //得让窗口出现
         
