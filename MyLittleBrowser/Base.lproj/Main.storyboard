@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22505"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="22505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6"/>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="MyLittleBrowser" customModuleProvider="target"/>
+                <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="0.0"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="hyk-7k-qax">
+            <objects>
+                <windowController storyboardIdentifier="sbid-windowcontroller" id="Sq3-za-z1P" customClass="WindowController" customModule="MyLittleBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="alertPanel" frameAutosaveName="" titlebarAppearsTransparent="YES" id="lc9-H2-d60">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" resizable="YES" fullSizeContentView="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="239" width="300" height="360"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="875"/>
+                        <value key="minSize" type="size" width="300" height="360"/>
+                        <view key="contentView" id="tLV-5N-BCy">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="360"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <connections>
+                            <outlet property="delegate" destination="Sq3-za-z1P" id="o5w-eW-fx6"/>
+                        </connections>
+                    </window>
+                </windowController>
+                <customObject id="qha-Fx-LxH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79" y="-275"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ahv-NK-tjO">
+            <objects>
+                <customObject id="hrg-DV-h5T" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="sbid-viewcontroller" id="rOU-ph-52Q" customClass="ViewController" customModule="MyLittleBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="LZs-As-TxS">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <visualEffectView blendingMode="behindWindow" material="fullScreenUI" state="active" translatesAutoresizingMaskIntoConstraints="NO" id="rKQ-qZ-plW">
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                                <subviews>
+                                    <button wantsLayer="YES" focusRingType="exterior" translatesAutoresizingMaskIntoConstraints="NO" id="o8k-Qi-7bw" userLabel="OpenButton">
+                                        <rect key="frame" x="357" y="256" width="36" height="37"/>
+                                        <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="pip.exit" catalog="system" imagePosition="overlaps" alignment="center" borderStyle="border" focusRingType="exterior" imageScaling="proportionallyDown" inset="2" id="vL5-5q-SdA">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent">o</string>
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                        </buttonCell>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="KuO-jd-NbN"/>
+                                            <constraint firstAttribute="height" constant="30" id="dvp-Ze-Mz6"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="onOpenButtonClicked:" target="rOU-ph-52Q" id="x2O-zv-xVg"/>
+                                        </connections>
+                                    </button>
+                                    <wkWebView wantsLayer="YES" customUserAgent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:122.0) Gecko/20100101 Firefox/122.0" translatesAutoresizingMaskIntoConstraints="NO" id="hvu-D9-SNS">
+                                        <rect key="frame" x="10" y="10" width="380" height="240"/>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                    <button wantsLayer="YES" focusRingType="exterior" translatesAutoresizingMaskIntoConstraints="NO" id="ayU-Tl-vKr" userLabel="QuitButton">
+                                        <rect key="frame" x="7" y="256" width="36" height="37"/>
+                                        <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="xmark.app.fill" catalog="system" imagePosition="only" alignment="center" borderStyle="border" focusRingType="exterior" imageScaling="proportionallyDown" inset="2" id="3rl-ln-I2N">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                        </buttonCell>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="69E-7Q-oqT"/>
+                                            <constraint firstAttribute="height" constant="30" id="TaD-Ph-KZl"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="onQuitButtonClicked:" target="rOU-ph-52Q" id="jLz-mT-GeP"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rtY-Ft-FHf" userLabel="QuitButton2">
+                                        <rect key="frame" x="2" y="273" width="58" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hTq-Kf-5kh">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent">w</string>
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="onQuitButtonClicked:" target="rOU-ph-52Q" id="Oc4-3A-EsJ"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pSt-uz-gcy" userLabel="QuitAllButton">
+                                        <rect key="frame" x="-7" y="273" width="75" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aES-MF-NTZ">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent">q</string>
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="onQuitAllButtonClicked:" target="rOU-ph-52Q" id="yKR-LN-ofq"/>
+                                        </connections>
+                                    </button>
+                                    <button wantsLayer="YES" focusRingType="exterior" translatesAutoresizingMaskIntoConstraints="NO" id="48v-Ma-yOw" userLabel="URLButton" customClass="DraggableNSButton" customModule="MyLittleBrowser" customModuleProvider="target">
+                                        <rect key="frame" x="47" y="256" width="306" height="37"/>
+                                        <buttonCell key="cell" type="bevel" title="URL Here" bezelStyle="regularSquare" alignment="center" borderStyle="border" focusRingType="exterior" imageScaling="proportionallyDown" inset="2" id="dDP-s7-aq0">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent">l</string>
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                        </buttonCell>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="3e8-oJ-gnJ"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="onURLButtonClicked:" target="rOU-ph-52Q" id="FY4-9o-6eK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="o8k-Qi-7bw" firstAttribute="top" secondItem="rKQ-qZ-plW" secondAttribute="top" constant="10" id="G4L-Vw-A7h"/>
+                                    <constraint firstAttribute="bottom" secondItem="hvu-D9-SNS" secondAttribute="bottom" constant="10" id="OKb-nw-pxl"/>
+                                    <constraint firstAttribute="trailing" secondItem="o8k-Qi-7bw" secondAttribute="trailing" constant="10" id="Oom-rf-UFy"/>
+                                    <constraint firstItem="hvu-D9-SNS" firstAttribute="leading" secondItem="rKQ-qZ-plW" secondAttribute="leading" constant="10" id="TDd-gj-tGe"/>
+                                    <constraint firstItem="hvu-D9-SNS" firstAttribute="top" secondItem="48v-Ma-yOw" secondAttribute="bottom" constant="10" id="Vrf-Bb-ETP"/>
+                                    <constraint firstItem="ayU-Tl-vKr" firstAttribute="leading" secondItem="rKQ-qZ-plW" secondAttribute="leading" constant="10" id="Xld-5b-jFn"/>
+                                    <constraint firstItem="o8k-Qi-7bw" firstAttribute="leading" secondItem="48v-Ma-yOw" secondAttribute="trailing" constant="10" id="amS-4Y-YEu"/>
+                                    <constraint firstAttribute="trailing" secondItem="hvu-D9-SNS" secondAttribute="trailing" constant="10" id="iY4-vI-1qR"/>
+                                    <constraint firstItem="48v-Ma-yOw" firstAttribute="top" secondItem="rKQ-qZ-plW" secondAttribute="top" constant="10" id="id9-dD-FgC"/>
+                                    <constraint firstItem="ayU-Tl-vKr" firstAttribute="top" secondItem="rKQ-qZ-plW" secondAttribute="top" constant="10" id="uL8-Q5-S3j"/>
+                                    <constraint firstItem="48v-Ma-yOw" firstAttribute="leading" secondItem="ayU-Tl-vKr" secondAttribute="trailing" constant="10" id="wEc-Uk-6D2"/>
+                                </constraints>
+                            </visualEffectView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="rKQ-qZ-plW" firstAttribute="leading" secondItem="LZs-As-TxS" secondAttribute="leading" id="Cer-K2-jLY"/>
+                            <constraint firstAttribute="trailing" secondItem="rKQ-qZ-plW" secondAttribute="trailing" id="Tlu-P9-axp"/>
+                            <constraint firstAttribute="bottom" secondItem="rKQ-qZ-plW" secondAttribute="bottom" id="WTd-Zg-wt6"/>
+                            <constraint firstItem="rKQ-qZ-plW" firstAttribute="top" secondItem="LZs-As-TxS" secondAttribute="top" id="fU6-TO-Mu5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="outLetWebView" destination="hvu-D9-SNS" id="NiW-Hl-5HZ"/>
+                        <outlet property="urlButton" destination="48v-Ma-yOw" id="WLu-OV-5D7"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="50" y="211"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pip.exit" catalog="system" width="20" height="16"/>
+        <image name="xmark.app.fill" catalog="system" width="15" height="14"/>
+    </resources>
+</document>

@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F004D192B7C6D8D0013C29F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F004D182B7C6D8D0013C29F /* AppDelegate.swift */; };
+		8F004D1B2B7C6D8D0013C29F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F004D1A2B7C6D8D0013C29F /* ViewController.swift */; };
+		8F004D1D2B7C6D8F0013C29F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F004D1C2B7C6D8F0013C29F /* Assets.xcassets */; };
+		8F004D202B7C6D8F0013C29F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F004D1E2B7C6D8F0013C29F /* Main.storyboard */; };
+		8F004D2B2B7C6D8F0013C29F /* MyLittleBrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F004D2A2B7C6D8F0013C29F /* MyLittleBrowserTests.swift */; };
+		8F004D352B7C6D8F0013C29F /* MyLittleBrowserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F004D342B7C6D8F0013C29F /* MyLittleBrowserUITests.swift */; };
+		8F004D372B7C6D8F0013C29F /* MyLittleBrowserUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F004D362B7C6D8F0013C29F /* MyLittleBrowserUITestsLaunchTests.swift */; };
+		8F004D442B7C6ECF0013C29F /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F004D432B7C6ECF0013C29F /* WindowController.swift */; };
+		8FDBA2362B7C8D59009FBDB1 /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FDBA2352B7C8D59009FBDB1 /* info.plist */; };
+		8FDBA2392B7E38B7009FBDB1 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDBA2382B7E38B7009FBDB1 /* Log.swift */; };
+		8FE53FCB2B80828A00657239 /* RSVerticallyCenteredTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE53FCA2B80828A00657239 /* RSVerticallyCenteredTextFieldCell.swift */; };
+		8FE53FCD2B8088E600657239 /* DraggableNSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE53FCC2B8088E600657239 /* DraggableNSButton.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F004D272B7C6D8F0013C29F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F004D0D2B7C6D8D0013C29F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F004D142B7C6D8D0013C29F;
+			remoteInfo = MyLittleBrowser;
+		};
+		8F004D312B7C6D8F0013C29F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F004D0D2B7C6D8D0013C29F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F004D142B7C6D8D0013C29F;
+			remoteInfo = MyLittleBrowser;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8F004D152B7C6D8D0013C29F /* MyLittleBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLittleBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F004D182B7C6D8D0013C29F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8F004D1A2B7C6D8D0013C29F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8F004D1C2B7C6D8F0013C29F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8F004D1F2B7C6D8F0013C29F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8F004D212B7C6D8F0013C29F /* MyLittleBrowser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyLittleBrowser.entitlements; sourceTree = "<group>"; };
+		8F004D262B7C6D8F0013C29F /* MyLittleBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLittleBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F004D2A2B7C6D8F0013C29F /* MyLittleBrowserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLittleBrowserTests.swift; sourceTree = "<group>"; };
+		8F004D302B7C6D8F0013C29F /* MyLittleBrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLittleBrowserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F004D342B7C6D8F0013C29F /* MyLittleBrowserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLittleBrowserUITests.swift; sourceTree = "<group>"; };
+		8F004D362B7C6D8F0013C29F /* MyLittleBrowserUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLittleBrowserUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8F004D432B7C6ECF0013C29F /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		8FDBA2352B7C8D59009FBDB1 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
+		8FDBA2382B7E38B7009FBDB1 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		8FE53FCA2B80828A00657239 /* RSVerticallyCenteredTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSVerticallyCenteredTextFieldCell.swift; sourceTree = "<group>"; };
+		8FE53FCC2B8088E600657239 /* DraggableNSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableNSButton.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F004D122B7C6D8D0013C29F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F004D232B7C6D8F0013C29F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F004D2D2B7C6D8F0013C29F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F004D0C2B7C6D8D0013C29F = {
+			isa = PBXGroup;
+			children = (
+				8F004D172B7C6D8D0013C29F /* MyLittleBrowser */,
+				8F004D292B7C6D8F0013C29F /* MyLittleBrowserTests */,
+				8F004D332B7C6D8F0013C29F /* MyLittleBrowserUITests */,
+				8F004D162B7C6D8D0013C29F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8F004D162B7C6D8D0013C29F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F004D152B7C6D8D0013C29F /* MyLittleBrowser.app */,
+				8F004D262B7C6D8F0013C29F /* MyLittleBrowserTests.xctest */,
+				8F004D302B7C6D8F0013C29F /* MyLittleBrowserUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F004D172B7C6D8D0013C29F /* MyLittleBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				8FE53FCC2B8088E600657239 /* DraggableNSButton.swift */,
+				8FE53FCA2B80828A00657239 /* RSVerticallyCenteredTextFieldCell.swift */,
+				8F004D182B7C6D8D0013C29F /* AppDelegate.swift */,
+				8F004D1A2B7C6D8D0013C29F /* ViewController.swift */,
+				8F004D1C2B7C6D8F0013C29F /* Assets.xcassets */,
+				8F004D1E2B7C6D8F0013C29F /* Main.storyboard */,
+				8F004D432B7C6ECF0013C29F /* WindowController.swift */,
+				8F004D212B7C6D8F0013C29F /* MyLittleBrowser.entitlements */,
+				8FDBA2352B7C8D59009FBDB1 /* info.plist */,
+				8FDBA2382B7E38B7009FBDB1 /* Log.swift */,
+			);
+			path = MyLittleBrowser;
+			sourceTree = "<group>";
+		};
+		8F004D292B7C6D8F0013C29F /* MyLittleBrowserTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F004D2A2B7C6D8F0013C29F /* MyLittleBrowserTests.swift */,
+			);
+			path = MyLittleBrowserTests;
+			sourceTree = "<group>";
+		};
+		8F004D332B7C6D8F0013C29F /* MyLittleBrowserUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8F004D342B7C6D8F0013C29F /* MyLittleBrowserUITests.swift */,
+				8F004D362B7C6D8F0013C29F /* MyLittleBrowserUITestsLaunchTests.swift */,
+			);
+			path = MyLittleBrowserUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F004D142B7C6D8D0013C29F /* MyLittleBrowser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F004D3A2B7C6D8F0013C29F /* Build configuration list for PBXNativeTarget "MyLittleBrowser" */;
+			buildPhases = (
+				8F004D112B7C6D8D0013C29F /* Sources */,
+				8F004D122B7C6D8D0013C29F /* Frameworks */,
+				8F004D132B7C6D8D0013C29F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyLittleBrowser;
+			productName = MyLittleBrowser;
+			productReference = 8F004D152B7C6D8D0013C29F /* MyLittleBrowser.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8F004D252B7C6D8F0013C29F /* MyLittleBrowserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F004D3D2B7C6D8F0013C29F /* Build configuration list for PBXNativeTarget "MyLittleBrowserTests" */;
+			buildPhases = (
+				8F004D222B7C6D8F0013C29F /* Sources */,
+				8F004D232B7C6D8F0013C29F /* Frameworks */,
+				8F004D242B7C6D8F0013C29F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F004D282B7C6D8F0013C29F /* PBXTargetDependency */,
+			);
+			name = MyLittleBrowserTests;
+			productName = MyLittleBrowserTests;
+			productReference = 8F004D262B7C6D8F0013C29F /* MyLittleBrowserTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8F004D2F2B7C6D8F0013C29F /* MyLittleBrowserUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F004D402B7C6D8F0013C29F /* Build configuration list for PBXNativeTarget "MyLittleBrowserUITests" */;
+			buildPhases = (
+				8F004D2C2B7C6D8F0013C29F /* Sources */,
+				8F004D2D2B7C6D8F0013C29F /* Frameworks */,
+				8F004D2E2B7C6D8F0013C29F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F004D322B7C6D8F0013C29F /* PBXTargetDependency */,
+			);
+			name = MyLittleBrowserUITests;
+			productName = MyLittleBrowserUITests;
+			productReference = 8F004D302B7C6D8F0013C29F /* MyLittleBrowserUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F004D0D2B7C6D8D0013C29F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					8F004D142B7C6D8D0013C29F = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					8F004D252B7C6D8F0013C29F = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 8F004D142B7C6D8D0013C29F;
+					};
+					8F004D2F2B7C6D8F0013C29F = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 8F004D142B7C6D8D0013C29F;
+					};
+				};
+			};
+			buildConfigurationList = 8F004D102B7C6D8D0013C29F /* Build configuration list for PBXProject "MyLittleBrowser" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8F004D0C2B7C6D8D0013C29F;
+			productRefGroup = 8F004D162B7C6D8D0013C29F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F004D142B7C6D8D0013C29F /* MyLittleBrowser */,
+				8F004D252B7C6D8F0013C29F /* MyLittleBrowserTests */,
+				8F004D2F2B7C6D8F0013C29F /* MyLittleBrowserUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8F004D132B7C6D8D0013C29F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F004D1D2B7C6D8F0013C29F /* Assets.xcassets in Resources */,
+				8F004D202B7C6D8F0013C29F /* Main.storyboard in Resources */,
+				8FDBA2362B7C8D59009FBDB1 /* info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F004D242B7C6D8F0013C29F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F004D2E2B7C6D8F0013C29F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F004D112B7C6D8D0013C29F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FE53FCD2B8088E600657239 /* DraggableNSButton.swift in Sources */,
+				8F004D1B2B7C6D8D0013C29F /* ViewController.swift in Sources */,
+				8FE53FCB2B80828A00657239 /* RSVerticallyCenteredTextFieldCell.swift in Sources */,
+				8F004D442B7C6ECF0013C29F /* WindowController.swift in Sources */,
+				8FDBA2392B7E38B7009FBDB1 /* Log.swift in Sources */,
+				8F004D192B7C6D8D0013C29F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F004D222B7C6D8F0013C29F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F004D2B2B7C6D8F0013C29F /* MyLittleBrowserTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F004D2C2B7C6D8F0013C29F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F004D352B7C6D8F0013C29F /* MyLittleBrowserUITests.swift in Sources */,
+				8F004D372B7C6D8F0013C29F /* MyLittleBrowserUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F004D282B7C6D8F0013C29F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F004D142B7C6D8D0013C29F /* MyLittleBrowser */;
+			targetProxy = 8F004D272B7C6D8F0013C29F /* PBXContainerItemProxy */;
+		};
+		8F004D322B7C6D8F0013C29F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F004D142B7C6D8D0013C29F /* MyLittleBrowser */;
+			targetProxy = 8F004D312B7C6D8F0013C29F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8F004D1E2B7C6D8F0013C29F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F004D1F2B7C6D8F0013C29F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8F004D382B7C6D8F0013C29F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = info;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8F004D392B7C6D8F0013C29F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = info;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		8F004D3B2B7C6D8F0013C29F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyLittleBrowser/MyLittleBrowser.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 62KY5W4FJ3;
+				ENABLE_APP_SANDBOX = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyLittleBrowser/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "My Little Browser";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = justaloli.MyLittleBrowser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8F004D3C2B7C6D8F0013C29F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyLittleBrowser/MyLittleBrowser.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 62KY5W4FJ3;
+				ENABLE_APP_SANDBOX = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyLittleBrowser/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "My Little Browser";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = justaloli.MyLittleBrowser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		8F004D3E2B7C6D8F0013C29F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = justaloli.MyLittleBrowserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyLittleBrowser.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyLittleBrowser";
+			};
+			name = Debug;
+		};
+		8F004D3F2B7C6D8F0013C29F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = justaloli.MyLittleBrowserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyLittleBrowser.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyLittleBrowser";
+			};
+			name = Release;
+		};
+		8F004D412B7C6D8F0013C29F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = justaloli.MyLittleBrowserUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = MyLittleBrowser;
+			};
+			name = Debug;
+		};
+		8F004D422B7C6D8F0013C29F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = justaloli.MyLittleBrowserUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = MyLittleBrowser;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8F004D102B7C6D8D0013C29F /* Build configuration list for PBXProject "MyLittleBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F004D382B7C6D8F0013C29F /* Debug */,
+				8F004D392B7C6D8F0013C29F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F004D3A2B7C6D8F0013C29F /* Build configuration list for PBXNativeTarget "MyLittleBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F004D3B2B7C6D8F0013C29F /* Debug */,
+				8F004D3C2B7C6D8F0013C29F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F004D3D2B7C6D8F0013C29F /* Build configuration list for PBXNativeTarget "MyLittleBrowserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F004D3E2B7C6D8F0013C29F /* Debug */,
+				8F004D3F2B7C6D8F0013C29F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F004D402B7C6D8F0013C29F /* Build configuration list for PBXNativeTarget "MyLittleBrowserUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F004D412B7C6D8F0013C29F /* Debug */,
+				8F004D422B7C6D8F0013C29F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8F004D0D2B7C6D8D0013C29F /* Project object */;
+}
